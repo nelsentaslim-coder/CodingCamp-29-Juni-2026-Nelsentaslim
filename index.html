@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="dashboard">
+
+    <!-- Greeting Widget -->
+    <section class="widget widget--greeting">
+      <p id="greeting-text"></p>
+      <h1 id="clock"></h1>
+      <p id="date-text"></p>
+    </section>
+
+    <!-- Focus Timer -->
+    <section class="widget widget--timer">
+      <h2>Focus Timer</h2>
+      <div id="timer-display">25:00</div>
+      <div id="timer-finished" class="hidden">Sesi selesai!</div>
+      <div class="timer-controls">
+        <button id="btn-start">Start</button>
+        <button id="btn-stop" disabled>Stop</button>
+        <button id="btn-reset">Reset</button>
+      </div>
+    </section>
+
+    <!-- To-Do List -->
+    <section class="widget widget--todo">
+      <h2>To-Do List</h2>
+      <div class="todo-input-row">
+        <input type="text" id="todo-input" placeholder="Tambah tugas baru..." maxlength="200">
+        <button id="btn-add-task">Tambah</button>
+      </div>
+      <p id="todo-error" class="error-msg hidden"></p>
+      <ul id="todo-list"></ul>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="widget widget--links">
+      <h2>Quick Links</h2>
+      <div class="links-input-group">
+        <input type="text" id="link-name-input" placeholder="Nama" maxlength="50">
+        <input type="url" id="link-url-input" placeholder="https://..." maxlength="2048">
+        <button id="btn-add-link">Tambah Link</button>
+      </div>
+      <p id="link-error" class="error-msg hidden"></p>
+      <div id="links-container"></div>
+    </section>
+
+  </div>
+
+  <!-- Toast notification untuk storage error -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
